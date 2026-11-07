@@ -1,0 +1,514 @@
+FUNCTION_BLOCK FB_SystemControl
+  VAR_INPUT
+    start : BOOL;
+    stop : BOOL;
+  END_VAR
+  VAR_OUTPUT
+    system_run : BOOL;
+  END_VAR
+  VAR
+    RS0 : RS;
+  END_VAR
+
+{
+  "name": "FB_SystemControl",
+  "rung": {
+    "comment": "",
+    "nodes": [
+      {
+        "id": "INPUT-VARIABLE_1bd9c37a-d871-4eda-b0f0-a629be94878e",
+        "type": "input-variable",
+        "position": {
+          "x": 112,
+          "y": 96
+        },
+        "height": 32,
+        "width": 128,
+        "measured": {
+          "width": 128,
+          "height": 32
+        },
+        "draggable": true,
+        "selectable": true,
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 224,
+                "y": 112
+              },
+              "relPosition": {
+                "x": 112,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 224,
+                "y": 112
+              },
+              "relPosition": {
+                "x": 112,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": 224,
+              "y": 112
+            },
+            "relPosition": {
+              "x": 112,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "8670492",
+          "variable": {
+            "name": "start",
+            "class": "input",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": true
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true,
+          "wrongVariable": true
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "OUTPUT-VARIABLE_2f066e51-7c42-4658-8978-381076a92788",
+        "type": "output-variable",
+        "position": {
+          "x": 448,
+          "y": 96
+        },
+        "height": 32,
+        "width": 128,
+        "measured": {
+          "width": 128,
+          "height": 32
+        },
+        "draggable": true,
+        "selectable": true,
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 368,
+                "y": 224
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 368,
+                "y": 224
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 16
+              },
+              "id": "input-variable",
+              "position": "left",
+              "type": "target"
+            }
+          ],
+          "outputHandles": [],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 368,
+              "y": 224
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 16
+            },
+            "id": "input-variable",
+            "position": "left",
+            "type": "target"
+          },
+          "numericId": "3486766",
+          "variable": {
+            "name": "system_run",
+            "class": "output",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": false,
+            "id": "broken-OUTPUT-VARIABLE_2f066e51-7c42-4658-8978-381076a92788"
+          },
+          "executionOrder": 0,
+          "variant": "output-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true,
+          "wrongVariable": true
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "INPUT-VARIABLE_7c7f86d5-da93-47f0-9012-0e6a163203c4",
+        "type": "input-variable",
+        "position": {
+          "x": 112,
+          "y": 144
+        },
+        "height": 32,
+        "width": 128,
+        "measured": {
+          "width": 128,
+          "height": 32
+        },
+        "draggable": true,
+        "selectable": true,
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 272,
+                "y": 176
+              },
+              "relPosition": {
+                "x": 112,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "inputHandles": [],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 272,
+                "y": 176
+              },
+              "relPosition": {
+                "x": 112,
+                "y": 16
+              },
+              "id": "output-variable",
+              "position": "right",
+              "type": "source"
+            }
+          ],
+          "outputConnector": {
+            "glbPosition": {
+              "x": 272,
+              "y": 176
+            },
+            "relPosition": {
+              "x": 112,
+              "y": 16
+            },
+            "id": "output-variable",
+            "position": "right",
+            "type": "source"
+          },
+          "numericId": "6970630",
+          "variable": {
+            "name": "stop",
+            "class": "input",
+            "type": {
+              "definition": "base-type",
+              "value": "BOOL"
+            },
+            "location": "",
+            "initialValue": null,
+            "documentation": "",
+            "debug": true
+          },
+          "executionOrder": 0,
+          "variant": "input-variable",
+          "negated": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true,
+          "wrongVariable": true
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "BLOCK_041b3ca6-9c19-4199-b4fd-c8597412e356",
+        "type": "block",
+        "position": {
+          "x": 304,
+          "y": 64
+        },
+        "height": 120,
+        "width": 60,
+        "measured": {
+          "width": 60,
+          "height": 120
+        },
+        "draggable": true,
+        "selectable": true,
+        "data": {
+          "handles": [
+            {
+              "glbPosition": {
+                "x": 304,
+                "y": 176
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "S",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 304,
+                "y": 224
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "R1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 364,
+                "y": 176
+              },
+              "relPosition": {
+                "x": 60,
+                "y": 48
+              },
+              "id": "Q1",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputHandles": [
+            {
+              "glbPosition": {
+                "x": 304,
+                "y": 176
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 48
+              },
+              "id": "S",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 48,
+                "left": 0
+              }
+            },
+            {
+              "glbPosition": {
+                "x": 304,
+                "y": 224
+              },
+              "relPosition": {
+                "x": 0,
+                "y": 96
+              },
+              "id": "R1",
+              "position": "left",
+              "type": "target",
+              "style": {
+                "top": 96,
+                "left": 0
+              }
+            }
+          ],
+          "outputHandles": [
+            {
+              "glbPosition": {
+                "x": 364,
+                "y": 176
+              },
+              "relPosition": {
+                "x": 60,
+                "y": 48
+              },
+              "id": "Q1",
+              "position": "right",
+              "type": "source",
+              "style": {
+                "top": 48,
+                "right": 0
+              }
+            }
+          ],
+          "inputConnector": {
+            "glbPosition": {
+              "x": 304,
+              "y": 176
+            },
+            "relPosition": {
+              "x": 0,
+              "y": 48
+            },
+            "id": "S",
+            "position": "left",
+            "type": "target",
+            "style": {
+              "top": 48,
+              "left": 0
+            }
+          },
+          "outputConnector": {
+            "glbPosition": {
+              "x": 364,
+              "y": 176
+            },
+            "relPosition": {
+              "x": 60,
+              "y": 48
+            },
+            "id": "Q1",
+            "position": "right",
+            "type": "source",
+            "style": {
+              "top": 48,
+              "right": 0
+            }
+          },
+          "numericId": "886326",
+          "variant": {
+            "name": "RS",
+            "type": "function-block",
+            "language": "st",
+            "variables": [
+              {
+                "name": "S",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "R1",
+                "class": "input",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              },
+              {
+                "name": "Q1",
+                "class": "output",
+                "type": {
+                  "definition": "base-type",
+                  "value": "BOOL"
+                }
+              }
+            ],
+            "body": "",
+            "documentation": "The RS bistable is a latch where the Reset dominates."
+          },
+          "variable": {
+            "id": "d01b2e6e-31e8-473b-ae60-20b77a7b50db",
+            "name": "RS0",
+            "type": {
+              "definition": "derived",
+              "value": "RS"
+            },
+            "class": "local",
+            "location": "",
+            "documentation": "",
+            "debug": false
+          },
+          "executionOrder": 0,
+          "executionControl": false,
+          "draggable": true,
+          "selectable": true,
+          "deletable": true
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "xy-edge__INPUT-VARIABLE_1bd9c37a-d871-4eda-b0f0-a629be94878eoutput-variable-BLOCK_041b3ca6-9c19-4199-b4fd-c8597412e356S",
+        "source": "INPUT-VARIABLE_1bd9c37a-d871-4eda-b0f0-a629be94878e",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_041b3ca6-9c19-4199-b4fd-c8597412e356",
+        "targetHandle": "S",
+        "type": "smoothstep"
+      },
+      {
+        "id": "xy-edge__INPUT-VARIABLE_7c7f86d5-da93-47f0-9012-0e6a163203c4output-variable-BLOCK_041b3ca6-9c19-4199-b4fd-c8597412e356R1",
+        "source": "INPUT-VARIABLE_7c7f86d5-da93-47f0-9012-0e6a163203c4",
+        "sourceHandle": "output-variable",
+        "target": "BLOCK_041b3ca6-9c19-4199-b4fd-c8597412e356",
+        "targetHandle": "R1",
+        "type": "smoothstep"
+      },
+      {
+        "id": "xy-edge__BLOCK_041b3ca6-9c19-4199-b4fd-c8597412e356Q1-OUTPUT-VARIABLE_2f066e51-7c42-4658-8978-381076a92788input-variable",
+        "source": "BLOCK_041b3ca6-9c19-4199-b4fd-c8597412e356",
+        "sourceHandle": "Q1",
+        "target": "OUTPUT-VARIABLE_2f066e51-7c42-4658-8978-381076a92788",
+        "targetHandle": "input-variable",
+        "type": "smoothstep"
+      }
+    ],
+    "selectedNodes": []
+  }
+}
+END_FUNCTION_BLOCK

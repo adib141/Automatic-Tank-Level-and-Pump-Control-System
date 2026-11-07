@@ -1,0 +1,14 @@
+{
+  "pouOffsets": {
+    "FB_SystemControl": {
+      "kind": "FUNCTION_BLOCK",
+      "startLine": 1,
+      "endLine": 15
+    },
+    "main": {
+      "kind": "PROGRAM",
+      "startLine": 17,
+      "endLine": 142
+    }
+  }
+}
